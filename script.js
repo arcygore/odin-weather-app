@@ -41,9 +41,9 @@ function displayData() {
     const weatherUpdated = document.createElement('footer');
     weatherCard.classList.add('weather-card')
     weatherLocation.innerText = `${cityName}, ${regionName}`;
-    weatherTemp.innerText = `${currentTemp}℉`
-    weatherTempFeels.innerText = `${feelsLikeTemp}℉`
-    weatherPrecip.innerText = `${precipitation}"`
+    weatherTemp.innerText = `${currentTemp.toPrecision(2)}℉`
+    weatherTempFeels.innerText = `Feels like: ${feelsLikeTemp.toPrecision(2)}℉`
+    weatherPrecip.innerText = `Precipitation: ${precipitation}"`
     weatherUpdated.innerText = `Last Updated: ${lastUpdate}`
     weatherCard.appendChild(weatherLocation)
     weatherCard.appendChild(weatherTemp)
