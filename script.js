@@ -10,7 +10,7 @@ let precipitation = 0;
 let lastUpdate = '';
 
 function fetchData(location) {
-    fetch(`http://api.weatherapi.com/v1/current.json?key=520f6dac622f4655b4f162125232703&q=${location}/`)
+    fetch(`http://api.weatherapi.com/v1/current.json?key=520f6dac622f4655b4f162125232703&q=${location}/`, { mode: 'cors' })
         .then(res => {
             return res.json()
         })
